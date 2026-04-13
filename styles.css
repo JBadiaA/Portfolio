@@ -23,6 +23,10 @@
 /* --- Reset ------------------------------------------------- */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
+
+/* --- No scrollbars ---------------------------------------- */
+* { scrollbar-width: none; -ms-overflow-style: none; }
+*::-webkit-scrollbar { display: none; }
 body {
   font-family: var(--font);
   background: var(--content-bg);
@@ -49,12 +53,10 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   scrollbar-width: thin;
   scrollbar-color: rgba(255,255,255,0.1) transparent;
 }
-#sidebar::-webkit-scrollbar { width: 3px; }
-#sidebar::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 2px; }
 
 .sidebar-name {
   font-size: 50px;
-  font-weight: 800;
+  font-weight: 300;
   color: var(--sidebar-name);
   line-height: 0.95;
   letter-spacing: -1.5px;
@@ -79,7 +81,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   font-size: 12px;
   font-weight: 300;
   color: var(--sidebar-link);
-  padding: 3px 0 3px 10px;
+  padding: 5px 0 5px 10px;
   cursor: pointer;
   transition: color 0.15s;
   line-height: 1.5;
@@ -93,7 +95,14 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   padding-left: 0;
   font-weight: 400;
   font-size: 12px;
-  margin-bottom: 2px;
+  margin-bottom: 4px;
+  margin-top: 4px;
+}
+.sidebar-link.compact {
+  font-size: 11px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 1.35;
 }
 
 .sidebar-bottom {
@@ -168,6 +177,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   display: grid;
   grid-template-columns: 55fr 45fr;
   gap: 3px;
+  padding: 3px;
 }
 
 .bento-tile {
@@ -283,10 +293,55 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 .detail-images img:hover { opacity: 0.9; }
 
+/* --- Personal drawings grid view -------------------------- */
+.personal-grid-view {
+  animation: fadeUp 0.2s ease;
+  padding: 3px;
+}
+.personal-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3px;
+}
+.personal-grid-item {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 1 / 1;
+  background: #f0f0f0;
+  cursor: zoom-in;
+}
+.personal-grid-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+.personal-grid-item:hover img { transform: scale(1.05); }
+
+/* --- Personal drawing single view (legacy, kept for direct hash access) */
+.personal-view {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 40px;
+  background: var(--content-bg);
+}
+.personal-image-wrap {
+  cursor: zoom-in;
+  max-width: 800px;
+  width: 100%;
+}
+.personal-image-wrap img {
+  width: 100%;
+  display: block;
+  box-shadow: rgba(0,0,0,0.08) 0 8px 32px;
+}
+
 /* --- About page ------------------------------------------- */
 .about-view { animation: fadeUp 0.2s ease; }
 
-/* Video section */
 .about-video-section {
   position: relative;
   height: 100vh;
@@ -294,96 +349,92 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   background: #000;
 }
 
-.about-video {
+/* Pulsating background image */
+.about-bg {
   position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  inset: -5%;           /* slight oversizing so pulse doesn't show edges */
+  background-image: url('Projects/1687958630812.jpg');
+  background-size: cover;
+  background-position: center;
+  animation: bgPulse 12s ease-in-out infinite;
+  filter: blur(0px) brightness(0.85);
+  transition: filter 1.4s ease;
+  will-change: transform, filter;
+}
+.about-bg.revealed {
+  filter: blur(8px) brightness(0.65);
 }
 
+@keyframes bgPulse {
+  0%, 100% { transform: scale(1);    }
+  50%       { transform: scale(1.06); }
+}
+
+/* Dark gradient over background */
 .about-video-grad {
   position: absolute;
   inset: 0;
   background: linear-gradient(
     to top,
-    rgba(0,0,0,0.88) 0%,
-    rgba(0,0,0,0.3) 50%,
+    rgba(0,0,0,0.75) 0%,
+    rgba(0,0,0,0.2)  50%,
     rgba(0,0,0,0.05) 100%
   );
   pointer-events: none;
   z-index: 1;
 }
 
-/* Content overlay — hidden until 75% of video */
+/* Content overlay — revealed after 1 second */
 .about-overlay-content {
   position: absolute;
-  bottom: 0; left: 0; right: 0;
+  inset: 0;
   z-index: 2;
-  padding: 60px 56px;
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 48px;
-  align-items: end;
+  padding: 60px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  pointer-events: none;
 
   opacity: 0;
-  transform: translateY(28px);
-  transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
-              transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: scale(0.93) translateY(16px);
+  transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .about-overlay-content.revealed {
   opacity: 1;
-  transform: translateY(0);
+  transform: scale(1) translateY(0);
+  pointer-events: auto;
 }
 
 .about-portrait {
-  width: 160px;
-  height: 200px;
+  width: 200px;
+  height: 250px;
   object-fit: cover;
   object-position: top center;
   border: none;
-  flex-shrink: 0;
+  filter: grayscale(1);
+  margin-bottom: 36px;
 }
 
-.about-text-block {}
-.about-label {
-  font-size: 10px;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.14em;
-  color: rgba(255,255,255,0.5);
-  margin-bottom: 10px;
-}
 .about-name-large {
-  font-size: 48px;
+  font-size: 72px;
   font-weight: 700;
   color: #ffffff;
   line-height: 1.0;
-  letter-spacing: -1px;
-  margin-bottom: 20px;
-}
-.about-bio {
-  font-size: 13px;
-  font-weight: 300;
-  color: rgba(255,255,255,0.75);
-  line-height: 1.8;
-  max-width: 520px;
+  letter-spacing: -2px;
+  margin-bottom: 28px;
+  text-align: center;
 }
 
-/* Scroll hint when video starts */
-.about-scroll-hint {
-  position: absolute;
-  bottom: 28px;
-  right: 32px;
-  z-index: 2;
-  font-size: 10px;
-  font-weight: 400;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: rgba(255,255,255,0.35);
-  transition: opacity 0.5s;
+.about-bio {
+  font-size: 14px;
+  font-weight: 300;
+  color: rgba(255,255,255,0.78);
+  line-height: 1.8;
+  max-width: 500px;
 }
-.about-scroll-hint.hidden { opacity: 0; pointer-events: none; }
 
 /* --- Lightbox --------------------------------------------- */
 .lightbox {
@@ -438,8 +489,9 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   .detail-header { grid-template-columns: 1fr; gap: 16px; padding: 40px 24px 32px; }
   .detail-title  { font-size: 52px; }
   .detail-images { padding-bottom: 60px; }
-  .about-overlay-content { grid-template-columns: 1fr; padding: 40px 24px; }
-  .about-name-large { font-size: 36px; }
+  .about-name-large { font-size: 52px; }
+  .about-portrait { width: 160px; height: 200px; }
+  .personal-grid { grid-template-columns: repeat(3, 1fr); }
 }
 
 @media (max-width: 640px) {
@@ -456,8 +508,10 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   .detail-title { font-size: 36px; letter-spacing: -0.5px; }
   .detail-images { grid-template-columns: 1fr; }
   .detail-section-label { padding: 24px 24px 8px; }
+  .personal-grid { grid-template-columns: repeat(2, 1fr); }
 
-  .about-portrait { width: 120px; height: 150px; }
+  .about-portrait { width: 130px; height: 165px; }
+  .about-name-large { font-size: 44px; letter-spacing: -1px; }
 
   .lightbox-prev { left: 8px; }
   .lightbox-next { right: 8px; }

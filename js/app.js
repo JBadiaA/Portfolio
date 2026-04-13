@@ -17,33 +17,33 @@ function renderSidebar() {
   const sidebar = document.getElementById('sidebar');
   if (!sidebar) return;
 
-  const hash    = location.hash;
-  const lang    = getLang();
-  const mainP   = projects.filter(p => p.section === 'main');
-  const altresP = projects.filter(p => p.section === 'altres');
-
-  const navLink = (p) => {
-    const active = hash === `#/project/${p.id}` ? 'active' : '';
-    return `<span class="sidebar-link ${active}" onclick="navigate('project','${p.id}')">${p.name}</span>`;
-  };
+  const hash   = location.hash;
+  const lang   = getLang();
+  const mainP  = projects.filter(p => p.section === 'main');
 
   const isAbout    = hash === '#/about';
-  const isProjects = hash === '#/' || hash === '';
+  const isPersonal = hash === '#/personal';
+  const isHome     = hash === '#/' || hash === '' || hash === '#';
+  const isProject  = hash.startsWith('#/project/');
+
+  const projectLink = (p) => {
+    const active = hash === `#/project/${p.id}` ? 'active' : '';
+    return `<span class="sidebar-link compact ${active}" onclick="navigate('project','${p.id}')">${p.name}</span>`;
+  };
 
   sidebar.innerHTML = `
-    <div class="sidebar-name" onclick="navigate('home')">Pilar<br>Morlan</div>
+    <div class="sidebar-name" onclick="navigate('home')">Pilar<br>Minye</div>
 
     <nav class="sidebar-nav">
       <span class="sidebar-link top-link ${isAbout ? 'active' : ''}"
             onclick="navigate('about')">${t('sobre_mi')}</span>
-      <span class="sidebar-link top-link ${isProjects ? 'active' : ''}"
-            onclick="navigate('home')">${t('projectes_personals')}</span>
 
-      <div class="sidebar-section">${t('projectes_label')}:</div>
-      ${mainP.map(navLink).join('')}
+      <span class="sidebar-link top-link ${isPersonal ? 'active' : ''}"
+            onclick="navigate('personal')">${t('projectes_personals')}</span>
 
-      <div class="sidebar-section">${t('altres_label')}:</div>
-      ${altresP.map(navLink).join('')}
+      <span class="sidebar-link top-link ${isHome || isProject ? 'active' : ''}"
+            onclick="navigate('home')">${t('projectes_label')}</span>
+      ${mainP.map(projectLink).join('')}
     </nav>
 
     <div class="sidebar-bottom">
@@ -58,19 +58,14 @@ function renderSidebar() {
         <button class="lang-btn ${lang==='en'?'active':''}" onclick="switchLang('en')">EN</button>
         <button class="lang-btn ${lang==='es'?'active':''}" onclick="switchLang('es')">ES</button>
       </div>
-
-      <div class="sidebar-home-btn" onclick="navigate('home')" title="Inici">
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
-        </svg>
-      </div>
     </div>
   `;
 }
 
 /* ── Home (bento grid) ────────────────────────────────────── */
 function renderHome() {
-  const tiles = projects.map((p, i) => {
+  const main = projects.filter(p => p.section === 'main');
+  const tiles = main.map((p, i) => {
     const featured = i === 0 ? 'featured' : '';
     const eager    = i < 4 ? 'eager' : 'lazy';
     return `
@@ -90,9 +85,22 @@ function renderProject(id) {
   const p = projects.find(x => x.id === id);
   if (!p) { navigate('home'); return ''; }
 
-  const desc = p.description[getLang()] || p.description.ca;
-  const cols     = p.image_cols ? `cols-${p.image_cols}` : '';
-  const imgs = p.images.map((img, i) => `
+  document.title = `${p.name} — Pilar Minye Morlan`;
+
+  // Personal drawings — single image, full-width, no header clutter
+  if (p.section === 'personal') {
+    return `
+      <div class="detail-view personal-view">
+        <div class="personal-image-wrap" onclick="openLightbox(0)">
+          <img src="${imgSrc(p.images[0])}" alt="${p.name}" />
+        </div>
+      </div>
+    `;
+  }
+
+  const desc  = p.description[getLang()] || p.description.ca;
+  const cols  = p.image_cols ? `cols-${p.image_cols}` : '';
+  const imgs  = p.images.map((img, i) => `
     <img
       src="${imgSrc(img)}"
       alt="${p.name} ${i+1}"
@@ -101,7 +109,6 @@ function renderProject(id) {
     />
   `).join('');
 
-  document.title = `${p.name} — Pilar Minye Morlan`;
   return `
     <div class="detail-view">
       <div class="detail-header">
@@ -117,21 +124,27 @@ function renderProject(id) {
   `;
 }
 
+/* ── Personal drawings grid ───────────────────────────────── */
+function renderPersonal() {
+  const personalP = projects.filter(p => p.section === 'personal');
+  document.title = `${t('projectes_personals')} — Pilar Minye Morlan`;
+
+  const imgs = personalP.map((p, i) => `
+    <div class="personal-grid-item" onclick="openPersonalLightbox(${i})">
+      <img src="${imgSrc(p.images[0])}" alt="${p.name}" loading="lazy" />
+    </div>
+  `).join('');
+
+  return `<div class="personal-grid-view"><div class="personal-grid">${imgs}</div></div>`;
+}
+
 /* ── About page ───────────────────────────────────────────── */
 function renderAbout() {
   document.title = `Sobre Mi — Pilar Minye Morlan`;
   return `
     <div class="about-view">
       <div class="about-video-section" id="about-video-section">
-        <video
-          id="about-video"
-          class="about-video"
-          muted
-          playsinline
-          preload="auto"
-        >
-          <source src="Projects/video.mp4" type="video/mp4" />
-        </video>
+        <div class="about-bg" id="about-bg"></div>
         <div class="about-video-grad"></div>
 
         <div class="about-overlay-content" id="about-overlay">
@@ -141,58 +154,25 @@ function renderAbout() {
             alt="Pilar Minye Morlan"
             onerror="this.style.display='none'"
           />
-          <div class="about-text-block">
-            <div class="about-label">${t('sobre_mi')}</div>
-            <h1 class="about-name-large">Pilar Minye<br>Morlan</h1>
-            <p class="about-bio">${t('about_bio')}</p>
-          </div>
+          <h1 class="about-name-large">Pilar Minye<br>Morlan</h1>
+          <p class="about-bio">${t('about_bio')}</p>
         </div>
-
-        <span class="about-scroll-hint" id="about-scroll-hint">${t('scroll_hint')}</span>
       </div>
     </div>
   `;
 }
 
-/* ── About video setup ────────────────────────────────────── */
+/* ── About setup ──────────────────────────────────────────── */
 function setupAbout() {
-  const video   = document.getElementById('about-video');
   const overlay = document.getElementById('about-overlay');
-  const hint    = document.getElementById('about-scroll-hint');
-  if (!video || !overlay) return;
+  const bg      = document.getElementById('about-bg');
+  if (!overlay) return;
 
-  // Clean up any previous observer
-  if (aboutObserver) { aboutObserver.disconnect(); aboutObserver = null; }
-
-  // IntersectionObserver — play when in view, pause when out
-  aboutObserver = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        video.play().catch(() => {});
-      } else {
-        video.pause();
-      }
-    });
-  }, { threshold: 0.25 });
-
-  aboutObserver.observe(video);
-
-  // Reveal content at 75% of video duration
-  video.addEventListener('timeupdate', function onUpdate() {
-    if (!video.duration) return;
-    const pct = video.currentTime / video.duration;
-    if (pct >= 0.75) {
-      overlay.classList.add('revealed');
-      if (hint) hint.classList.add('hidden');
-      video.removeEventListener('timeupdate', onUpdate);
-    }
-  });
-
-  // If video fails to load, reveal content immediately
-  video.addEventListener('error', () => {
-    overlay.classList.add('revealed');
-    if (hint) hint.classList.add('hidden');
-  });
+  // Slight delay so the bg image loads and the pulse starts before reveal
+  setTimeout(() => {
+    if (bg)      bg.classList.add('revealed');
+    if (overlay) overlay.classList.add('revealed');
+  }, 800);
 }
 
 /* ── Lightbox ─────────────────────────────────────────────── */
@@ -204,6 +184,13 @@ function openLightbox(index) {
   if (!p) return;
   lightboxImages = p.images;
   lightboxIndex  = index;
+  _showLightbox();
+}
+
+function openPersonalLightbox(index) {
+  const personalP = projects.filter(p => p.section === 'personal');
+  lightboxImages  = personalP.map(p => p.images[0]);
+  lightboxIndex   = index;
   _showLightbox();
 }
 
@@ -237,9 +224,10 @@ function _removeLightbox() {
 /* ── Router ───────────────────────────────────────────────── */
 function navigate(view, id) {
   _removeLightbox();
-  if (view === 'home')              history.pushState(null, '', '#/');
-  else if (view === 'about')        history.pushState(null, '', '#/about');
-  else if (view === 'project' && id) history.pushState(null, '', `#/project/${id}`);
+  if      (view === 'home')               history.pushState(null, '', '#/');
+  else if (view === 'about')              history.pushState(null, '', '#/about');
+  else if (view === 'personal')           history.pushState(null, '', '#/personal');
+  else if (view === 'project' && id)      history.pushState(null, '', `#/project/${id}`);
   render();
   window.scrollTo({ top: 0, behavior: 'instant' });
 }
@@ -247,16 +235,28 @@ function navigate(view, id) {
 function switchLang(lang) {
   setLang(lang);
   renderSidebar();
-  // Re-render current page for translated content
+
   const app  = document.getElementById('app');
   const hash = location.hash;
-  if (hash === '#/about') {
-    app.innerHTML = renderAbout();
-    setupAbout();
-  } else if (hash.startsWith('#/project/')) {
-    app.innerHTML = renderProject(hash.slice(10));
+  // Only re-render pages with translated content
+  if (hash !== '#/' && hash !== '') {
+    app.style.transition = 'opacity 0.15s ease, transform 0.15s ease';
+    app.style.opacity    = '0';
+    app.style.transform  = 'translateY(5px)';
+    setTimeout(() => {
+      if (hash === '#/about') {
+        app.innerHTML = renderAbout();
+        setupAbout();
+      } else if (hash === '#/personal') {
+        app.innerHTML = renderPersonal();
+      } else if (hash.startsWith('#/project/')) {
+        app.innerHTML = renderProject(hash.slice(10));
+      }
+      app.style.opacity   = '1';
+      app.style.transform = 'translateY(0)';
+      setTimeout(() => { app.style.transition = ''; }, 200);
+    }, 150);
   }
-  // home bento names don't change with lang; no re-render needed
 }
 
 function render() {
@@ -266,6 +266,8 @@ function render() {
   if (hash === '#/about') {
     app.innerHTML = renderAbout();
     setupAbout();
+  } else if (hash === '#/personal') {
+    app.innerHTML = renderPersonal();
   } else if (hash.startsWith('#/project/')) {
     app.innerHTML = renderProject(hash.slice(10));
   } else {

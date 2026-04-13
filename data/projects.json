@@ -179,57 +179,355 @@
     }
   },
   {
-    "id": "render",
-    "name": "Render",
-    "tile_name": "RENDER",
+    "id": "dibuix-01",
+    "name": "Dibuix 01",
+    "tile_name": "DIBUIX 01",
     "year": "2022",
-    "section": "altres",
-    "image_cols": 3,
+    "section": "personal",
     "cover": "7. DIBUIXOS/1.jpg",
     "images": [
-      "7. DIBUIXOS/1.jpg",
-      "7. DIBUIXOS/2.jpg",
-      "7. DIBUIXOS/3.jpg",
-      "7. DIBUIXOS/4.jpg",
-      "7. DIBUIXOS/5.jpg",
-      "7. DIBUIXOS/6.jpg",
-      "7. DIBUIXOS/7.jpg",
-      "7. DIBUIXOS/8.jpg",
-      "7. DIBUIXOS/9.jpg",
-      "7. DIBUIXOS/10.jpg",
-      "7. DIBUIXOS/11.jpg",
-      "7. DIBUIXOS/12.jpg"
+      "7. DIBUIXOS/1.jpg"
     ],
     "description": {
-      "ca": "Una col·lecció de renders i dibuixos que exploren el traç manual i digital com a forma de pensament i representació. Des d'esbossos conceptuals fins a representacions tècniques, el conjunt mostra la línia com a eina d'investigació i expressió.",
-      "en": "A collection of renders and drawings exploring freehand and digital mark-making as a form of thinking and representation. From conceptual sketches to technical representations, the series shows the line as a tool for investigation and expression.",
-      "es": "Una colección de renders y dibujos que exploran el trazo manual y digital como forma de pensamiento y representación. Desde bocetos conceptuales hasta representaciones técnicas, el conjunto muestra la línea como herramienta de investigación y expresión."
+      "ca": "",
+      "en": "",
+      "es": ""
     }
   },
   {
-    "id": "maquetes",
-    "name": "Maquetes",
-    "tile_name": "MAQUETES",
+    "id": "dibuix-02",
+    "name": "Dibuix 02",
+    "tile_name": "DIBUIX 02",
     "year": "2022",
-    "section": "altres",
-    "cover": "fotos maqueta/IMATGES EDITADES/IMATFES FINALS EDITADES AMB DIBUIXOS/CARTOLINA/1.jpg",
+    "section": "personal",
+    "cover": "7. DIBUIXOS/2.jpg",
     "images": [
-      "fotos maqueta/IMATGES EDITADES/IMATFES FINALS EDITADES AMB DIBUIXOS/CARTOLINA/1.jpg",
-      "fotos maqueta/IMATGES EDITADES/IMATFES FINALS EDITADES AMB DIBUIXOS/CARTOLINA/2.jpg",
-      "fotos maqueta/IMATGES EDITADES/IMATFES FINALS EDITADES AMB DIBUIXOS/CARTOLINA/3.jpg",
-      "fotos maqueta/IMATGES EDITADES/IMATFES FINALS EDITADES AMB DIBUIXOS/CARTOLINA/5.jpg",
-      "fotos maqueta/IMATGES EDITADES/IMATFES FINALS EDITADES AMB DIBUIXOS/FUSTA/1.jpg",
-      "fotos maqueta/IMATGES EDITADES/IMATFES FINALS EDITADES AMB DIBUIXOS/FUSTA/2.jpg",
-      "fotos maqueta/IMATGES EDITADES/IMATFES FINALS EDITADES AMB DIBUIXOS/FUSTA/3.jpg",
-      "fotos maqueta/IMATGES EDITADES/IMATFES FINALS EDITADES AMB DIBUIXOS/FUSTA/4.jpg",
-      "fotos maqueta/IMATGES EDITADES/IMATFES FINALS EDITADES AMB DIBUIXOS/ATRIBUT/1psd.jpg",
-      "fotos maqueta/IMATGES EDITADES/IMATFES FINALS EDITADES AMB DIBUIXOS/ATRIBUT/2.jpg",
-      "fotos maqueta/IMATGES EDITADES/IMATFES FINALS EDITADES AMB DIBUIXOS/ATRIBUT/3.jpg"
+      "7. DIBUIXOS/2.jpg"
     ],
     "description": {
-      "ca": "Sèrie de fotografies de maquetes explorant tres materials: cartolina, fusta i atribut. Les imatges combinen la fotografia de model amb intervencions gràfiques, creant un diàleg entre la representació física i el dibuix.",
-      "en": "A series of scale model photographs exploring three materials: cardboard, wood and fabric. The images combine model photography with graphic interventions, creating a dialogue between physical representation and drawing.",
-      "es": "Serie de fotografías de maquetas explorando tres materiales: cartulina, madera y tela. Las imágenes combinan la fotografía de modelo con intervenciones gráficas, creando un diálogo entre la representación física y el dibujo."
+      "ca": "",
+      "en": "",
+      "es": ""
+    }
+  },
+  {
+    "id": "dibuix-03",
+    "name": "Dibuix 03",
+    "tile_name": "DIBUIX 03",
+    "year": "2022",
+    "section": "personal",
+    "cover": "7. DIBUIXOS/3.jpg",
+    "images": [
+      "7. DIBUIXOS/3.jpg"
+    ],
+    "description": {
+      "ca": "",
+      "en": "",
+      "es": ""
+    }
+  },
+  {
+    "id": "dibuix-04",
+    "name": "Dibuix 04",
+    "tile_name": "DIBUIX 04",
+    "year": "2022",
+    "section": "personal",
+    "cover": "7. DIBUIXOS/4.jpg",
+    "images": [
+      "7. DIBUIXOS/4.jpg"
+    ],
+    "description": {
+      "ca": "",
+      "en": "",
+      "es": ""
+    }
+  },
+  {
+    "id": "dibuix-05",
+    "name": "Dibuix 05",
+    "tile_name": "DIBUIX 05",
+    "year": "2022",
+    "section": "personal",
+    "cover": "7. DIBUIXOS/5.jpg",
+    "images": [
+      "7. DIBUIXOS/5.jpg"
+    ],
+    "description": {
+      "ca": "",
+      "en": "",
+      "es": ""
+    }
+  },
+  {
+    "id": "dibuix-06",
+    "name": "Dibuix 06",
+    "tile_name": "DIBUIX 06",
+    "year": "2022",
+    "section": "personal",
+    "cover": "7. DIBUIXOS/6.jpg",
+    "images": [
+      "7. DIBUIXOS/6.jpg"
+    ],
+    "description": {
+      "ca": "",
+      "en": "",
+      "es": ""
+    }
+  },
+  {
+    "id": "dibuix-07",
+    "name": "Dibuix 07",
+    "tile_name": "DIBUIX 07",
+    "year": "2022",
+    "section": "personal",
+    "cover": "7. DIBUIXOS/7.jpg",
+    "images": [
+      "7. DIBUIXOS/7.jpg"
+    ],
+    "description": {
+      "ca": "",
+      "en": "",
+      "es": ""
+    }
+  },
+  {
+    "id": "dibuix-08",
+    "name": "Dibuix 08",
+    "tile_name": "DIBUIX 08",
+    "year": "2022",
+    "section": "personal",
+    "cover": "7. DIBUIXOS/8.jpg",
+    "images": [
+      "7. DIBUIXOS/8.jpg"
+    ],
+    "description": {
+      "ca": "",
+      "en": "",
+      "es": ""
+    }
+  },
+  {
+    "id": "dibuix-09",
+    "name": "Dibuix 09",
+    "tile_name": "DIBUIX 09",
+    "year": "2022",
+    "section": "personal",
+    "cover": "7. DIBUIXOS/9.jpg",
+    "images": [
+      "7. DIBUIXOS/9.jpg"
+    ],
+    "description": {
+      "ca": "",
+      "en": "",
+      "es": ""
+    }
+  },
+  {
+    "id": "dibuix-10",
+    "name": "Dibuix 10",
+    "tile_name": "DIBUIX 10",
+    "year": "2022",
+    "section": "personal",
+    "cover": "7. DIBUIXOS/10.jpg",
+    "images": [
+      "7. DIBUIXOS/10.jpg"
+    ],
+    "description": {
+      "ca": "",
+      "en": "",
+      "es": ""
+    }
+  },
+  {
+    "id": "dibuix-11",
+    "name": "Dibuix 11",
+    "tile_name": "DIBUIX 11",
+    "year": "2022",
+    "section": "personal",
+    "cover": "7. DIBUIXOS/11.jpg",
+    "images": [
+      "7. DIBUIXOS/11.jpg"
+    ],
+    "description": {
+      "ca": "",
+      "en": "",
+      "es": ""
+    }
+  },
+  {
+    "id": "dibuix-12",
+    "name": "Dibuix 12",
+    "tile_name": "DIBUIX 12",
+    "year": "2022",
+    "section": "personal",
+    "cover": "7. DIBUIXOS/12.jpg",
+    "images": [
+      "7. DIBUIXOS/12.jpg"
+    ],
+    "description": {
+      "ca": "",
+      "en": "",
+      "es": ""
+    }
+  },
+  {
+    "id": "dibuix-13",
+    "name": "Dibuix 13",
+    "tile_name": "DIBUIX 13",
+    "year": "2022",
+    "section": "personal",
+    "cover": "7. DIBUIXOS/13.jpg",
+    "images": [
+      "7. DIBUIXOS/13.jpg"
+    ],
+    "description": {
+      "ca": "",
+      "en": "",
+      "es": ""
+    }
+  },
+  {
+    "id": "dibuix-14",
+    "name": "Dibuix 14",
+    "tile_name": "DIBUIX 14",
+    "year": "2022",
+    "section": "personal",
+    "cover": "7. DIBUIXOS/14.jpg",
+    "images": [
+      "7. DIBUIXOS/14.jpg"
+    ],
+    "description": {
+      "ca": "",
+      "en": "",
+      "es": ""
+    }
+  },
+  {
+    "id": "dibuix-15",
+    "name": "Dibuix 15",
+    "tile_name": "DIBUIX 15",
+    "year": "2022",
+    "section": "personal",
+    "cover": "7. DIBUIXOS/15.jpg",
+    "images": [
+      "7. DIBUIXOS/15.jpg"
+    ],
+    "description": {
+      "ca": "",
+      "en": "",
+      "es": ""
+    }
+  },
+  {
+    "id": "dibuix-16",
+    "name": "Dibuix 16",
+    "tile_name": "DIBUIX 16",
+    "year": "2022",
+    "section": "personal",
+    "cover": "7. DIBUIXOS/16.jpg",
+    "images": [
+      "7. DIBUIXOS/16.jpg"
+    ],
+    "description": {
+      "ca": "",
+      "en": "",
+      "es": ""
+    }
+  },
+  {
+    "id": "dibuix-17",
+    "name": "Dibuix 17",
+    "tile_name": "DIBUIX 17",
+    "year": "2022",
+    "section": "personal",
+    "cover": "7. DIBUIXOS/17.jpg",
+    "images": [
+      "7. DIBUIXOS/17.jpg"
+    ],
+    "description": {
+      "ca": "",
+      "en": "",
+      "es": ""
+    }
+  },
+  {
+    "id": "dibuix-18",
+    "name": "Dibuix 18",
+    "tile_name": "DIBUIX 18",
+    "year": "2022",
+    "section": "personal",
+    "cover": "7. DIBUIXOS/18.jpg",
+    "images": [
+      "7. DIBUIXOS/18.jpg"
+    ],
+    "description": {
+      "ca": "",
+      "en": "",
+      "es": ""
+    }
+  },
+  {
+    "id": "dibuix-19",
+    "name": "Dibuix 19",
+    "tile_name": "DIBUIX 19",
+    "year": "2022",
+    "section": "personal",
+    "cover": "7. DIBUIXOS/19.jpg",
+    "images": [
+      "7. DIBUIXOS/19.jpg"
+    ],
+    "description": {
+      "ca": "",
+      "en": "",
+      "es": ""
+    }
+  },
+  {
+    "id": "dibuix-20",
+    "name": "Dibuix 20",
+    "tile_name": "DIBUIX 20",
+    "year": "2022",
+    "section": "personal",
+    "cover": "7. DIBUIXOS/20.jpg",
+    "images": [
+      "7. DIBUIXOS/20.jpg"
+    ],
+    "description": {
+      "ca": "",
+      "en": "",
+      "es": ""
+    }
+  },
+  {
+    "id": "dibuix-21",
+    "name": "Dibuix 21",
+    "tile_name": "DIBUIX 21",
+    "year": "2022",
+    "section": "personal",
+    "cover": "7. DIBUIXOS/21.jpg",
+    "images": [
+      "7. DIBUIXOS/21.jpg"
+    ],
+    "description": {
+      "ca": "",
+      "en": "",
+      "es": ""
+    }
+  },
+  {
+    "id": "dibuix-22",
+    "name": "Dibuix 22",
+    "tile_name": "DIBUIX 22",
+    "year": "2022",
+    "section": "personal",
+    "cover": "7. DIBUIXOS/22.jpg",
+    "images": [
+      "7. DIBUIXOS/22.jpg"
+    ],
+    "description": {
+      "ca": "",
+      "en": "",
+      "es": ""
     }
   }
 ]
