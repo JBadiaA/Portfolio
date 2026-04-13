@@ -1,0 +1,235 @@
+[
+  {
+    "id": "ohpera",
+    "name": "Òh!pera",
+    "tile_name": "ÒH!PERA",
+    "year": "2024",
+    "section": "main",
+    "cover": "1. OHPERA/FOTOGRAF SERGI/www-sergipanizo-cat_240711_liceu_oh!pera_090_a.jpg",
+    "images": [
+      "1. OHPERA/FOTOGRAF SERGI/www-sergipanizo-cat_240711_liceu_oh!pera_085_a.jpg",
+      "1. OHPERA/FOTOGRAF SERGI/www-sergipanizo-cat_240711_liceu_oh!pera_090_a.jpg",
+      "1. OHPERA/FOTOGRAF SERGI/www-sergipanizo-cat_240711_liceu_oh!pera_095_a.jpg",
+      "1. OHPERA/FOTOGRAF SERGI/www-sergipanizo-cat_240711_liceu_oh!pera_101_a.jpg",
+      "1. OHPERA/FOTOGRAF SERGI/www-sergipanizo-cat_240711_liceu_oh!pera_109_a.jpg",
+      "1. OHPERA/FOTOGRAF SERGI/www-sergipanizo-cat_240711_liceu_oh!pera_115_a.jpg",
+      "1. OHPERA/FOTOGRAF SERGI/www-sergipanizo-cat_240711_liceu_oh!pera_122_a.jpg",
+      "1. OHPERA/FOTOGRAF SERGI/www-sergipanizo-cat_240711_liceu_oh!pera_129_a.jpg",
+      "1. OHPERA/programa/1.JPG",
+      "1. OHPERA/programa/2.JPG",
+      "1. OHPERA/programa/3.JPG",
+      "1. OHPERA/programa/4.JPG"
+    ],
+    "description": {
+      "ca": "Òh!pera és un projecte de disseny escènic i de comunicació per a una producció operística al Gran Teatre del Liceu de Barcelona. Un projecte que fusiona la tradició operística amb una estètica contemporània a través del disseny del programa editorial i la identitat visual de l'espectacle.",
+      "en": "Òh!pera is a scenic and communication design project for an opera production at the Gran Teatre del Liceu in Barcelona. A project bridging operatic tradition with contemporary aesthetic through editorial programme design and visual identity.",
+      "es": "Òh!pera es un proyecto de diseño escénico y de comunicación para una producción operística en el Gran Teatre del Liceu de Barcelona. Un proyecto que fusiona la tradición operística con una estética contemporánea a través del diseño del programa editorial y la identidad visual del espectáculo."
+    }
+  },
+  {
+    "id": "temporalitat",
+    "name": "Temporalitat de l'Efímer",
+    "tile_name": "T.EFÍMER",
+    "year": "2024",
+    "section": "main",
+    "cover": "2. TFG/mockup/portada.jpg",
+    "images": [
+      "2. TFG/mockup/portada.jpg",
+      "2. TFG/mockup/index.jpg",
+      "2. TFG/mockup/context.jpg",
+      "2. TFG/mockup/casestudi.jpg",
+      "2. TFG/mockup/ideacio.jpg",
+      "2. TFG/mockup/esbozos.jpg",
+      "2. TFG/FORMALITZACIÓ/IMATGES FINALS INSTAL.LACIÓ TENDA/1.JPG",
+      "2. TFG/FORMALITZACIÓ/IMATGES FINALS INSTAL.LACIÓ TENDA/3.JPG",
+      "2. TFG/FORMALITZACIÓ/IMATGES FINALS INSTAL.LACIÓ TENDA/5.JPG",
+      "2. TFG/FORMALITZACIÓ/IMATGES FINALS INSTAL.LACIÓ TENDA/7.JPG",
+      "2. TFG/FORMALITZACIÓ/MAQUETAS/1.JPG",
+      "2. TFG/FORMALITZACIÓ/MAQUETAS/3.JPG",
+      "2. TFG/CASOOS/Memoria_TFG_PILAR.jpg",
+      "2. TFG/CASOOS/Memoria_TFG_PILAR3.jpg"
+    ],
+    "description": {
+      "ca": "Treball Final de Grau sobre la temporalitat del moment efímer. Una instal·lació espacial que explora la versatilitat, la superposició i la simplicidat com a eines de disseny. El projecte investiga la relació entre material tèxtil, espai i la percepció del temps a través d'una estructura habitable.",
+      "en": "Final Degree Project on the temporality of the ephemeral moment. A spatial installation exploring versatility, superposition and simplicity as design tools. The project investigates the relationship between textile material, space and the perception of time through a habitable structure.",
+      "es": "Trabajo Final de Grado sobre la temporalidad del momento efímero. Una instalación espacial que explora la versatilidad, la superposición y la simplicidad como herramientas de diseño. El proyecto investiga la relación entre material textil, espacio y la percepción del tiempo a través de una estructura habitable."
+    }
+  },
+  {
+    "id": "espurna",
+    "name": "Espurna",
+    "tile_name": "ESPURNA",
+    "year": "2024",
+    "section": "main",
+    "image_cols": 4,
+    "cover": "3. ESPURNA/JPG/DSC00385.jpg",
+    "images": [
+      "3. ESPURNA/JPG/DSC00385.jpg",
+      "3. ESPURNA/JPG/DSC00391.jpg",
+      "3. ESPURNA/JPG/DSC00425.jpg",
+      "3. ESPURNA/JPG/DSC00440.jpg",
+      "3. ESPURNA/JPG/DSC00462.jpg",
+      "3. ESPURNA/JPG/DSC00475.jpg",
+      "3. ESPURNA/JPG/IMG_20231103_132603.jpg",
+      "3. ESPURNA/JPG/IMG_20231202_125347.jpg",
+      "3. ESPURNA/JPG/IMG_20231202_125423.jpg",
+      "3. ESPURNA/JPG/IMG_20231210_133326.jpg",
+      "3. ESPURNA/JPG/IMG_20231220_141045.jpg",
+      "3. ESPURNA/JPG/IMG_20240108_132251.jpg"
+    ],
+    "description": {
+      "ca": "Espurna és un projecte amb ceràmica i llum. Encapsular la llum en un recipient ceràmic. Expressar amb la matèria formes i textures. Plantejar diferentes maneres de projectar la llum a través d'obertures en l'argila. Experimentar a través del material i el procés.",
+      "en": "Espurna (Spark) is a project with ceramics and light. Encapsulating light within a ceramic vessel. Expressing form and texture through matter. Exploring different ways of projecting light through openings in clay. Experimenting through material and process.",
+      "es": "Espurna (Chispa) es un proyecto con cerámica y luz. Encapsular la luz en un recipiente cerámico. Expresar con la materia formas y texturas. Plantear diferentes maneras de proyectar la luz a través de aperturas en la arcilla. Experimentar a través del material y el proceso."
+    }
+  },
+  {
+    "id": "flower-meadow",
+    "name": "Flower Meadow",
+    "tile_name": "FLOWER MEADOW",
+    "year": "2023",
+    "section": "main",
+    "cover": "5. FLOWER MEADOW/PANELL PART 2.jpg",
+    "images": [
+      "5. FLOWER MEADOW/PANELL PART 2.jpg",
+      "5. FLOWER MEADOW/1.jpg",
+      "5. FLOWER MEADOW/2.jpg",
+      "5. FLOWER MEADOW/3.jpg",
+      "5. FLOWER MEADOW/4.jpg",
+      "5. FLOWER MEADOW/DSC00055.jpg"
+    ],
+    "description": {
+      "ca": "Flower Meadow és un projecte que vincula la natura i la manera d'observar i viure amb l'imaginari de l'individu. L'habitatge es desglossa en tres mòduls, on trobem l'estudi, l'habitació i el bany. Aquestos es connecten mitjançant un recorregut, on caminar es torna essencial.",
+      "en": "Flower Meadow is a project linking nature and the way of observing and living with the individual's imagination. The dwelling breaks down into three modules — studio, bedroom and bathroom — connected through a path where walking becomes essential.",
+      "es": "Flower Meadow es un proyecto que vincula la naturaleza y la manera de observar y vivir con el imaginario del individuo. La vivienda se desglosa en tres módulos — estudio, habitación y baño — conectados mediante un recorrido donde caminar se vuelve esencial."
+    }
+  },
+  {
+    "id": "route",
+    "name": "Route",
+    "tile_name": "ROUTE",
+    "year": "2022",
+    "section": "main",
+    "image_cols": 3,
+    "cover": "6. ROUTE/1.jpg",
+    "images": [
+      "6. ROUTE/1.jpg",
+      "6. ROUTE/2.jpg",
+      "6. ROUTE/3.jpg",
+      "6. ROUTE/4.jpg",
+      "6. ROUTE/5.jpg",
+      "6. ROUTE/6.jpg",
+      "6. ROUTE/7.jpg",
+      "6. ROUTE/9.JPG",
+      "6. ROUTE/10.JPG",
+      "6. ROUTE/11.jpg",
+      "6. ROUTE/planols.jpg"
+    ],
+    "description": {
+      "ca": "Route és un projecte sensorial on les emocions van enllaçades amb la natura. L'objectiu principal és crear una experiència estètica on el disseny atmosfèric i experiencial proporcionara escenaris que embolcallin a l'usuari. Una experiència màgica situada enmig del bosc.",
+      "en": "Route is a sensory project where emotions are linked with nature. The main objective is to create an aesthetic experience where atmospheric and experiential design provides scenarios that envelop the user. A magical experience situated in the heart of the forest.",
+      "es": "Route es un proyecto sensorial donde las emociones van enlazadas con la naturaleza. El objetivo principal es crear una experiencia estética donde el diseño atmosférico y experiencial proporcionara escenarios que envuelvan al usuario. Una experiencia mágica situada en medio del bosque."
+    }
+  },
+  {
+    "id": "refuge-room",
+    "name": "Refuge Room",
+    "tile_name": "REFUGE ROOM",
+    "year": "2021",
+    "section": "main",
+    "cover": "REFUGE ROOM/MALETA JPG/M1.jpg",
+    "images": [
+      "REFUGE ROOM/MALETA JPG/M1.jpg",
+      "REFUGE ROOM/MALETA JPG/M2.jpg",
+      "REFUGE ROOM/MALETA JPG/M3.jpg",
+      "REFUGE ROOM/MALETA JPG/M4.jpg",
+      "REFUGE ROOM/MALETA JPG/PLANTA.jpg",
+      "REFUGE ROOM/MALETA JPG/PLANTA M.jpg",
+      "REFUGE ROOM/MALETA JPG/ALÇATS1.jpg",
+      "REFUGE ROOM/MALETA JPG/ALÇATS2.jpg"
+    ],
+    "description": {
+      "ca": "Refuge Room és un projecte espacial pensat com un espai de recés i contemplació. A través de plantes, alçats i maquetes, el treball proposa un refugi íntim que dialoga amb el seu entorn immediat, relacionant la construcció de l'espai des d'una perspectiva sensorial.",
+      "en": "Refuge Room is a spatial project conceived as a space of retreat and contemplation. Through floor plans, elevations and models, the project proposes an intimate refuge in dialogue with its immediate surroundings, relating spatial construction from a sensory perspective.",
+      "es": "Refuge Room es un proyecto espacial concebido como un espacio de recogimiento y contemplación. A través de plantas, alzados y maquetas, el trabajo propone un refugio íntimo que dialoga con su entorno inmediato, relacionando la construcción del espacio desde una perspectiva sensorial."
+    }
+  },
+  {
+    "id": "era-mitgera",
+    "name": "(ERA) Mitgera",
+    "tile_name": "(ERA) MITGERA",
+    "year": "2023",
+    "section": "main",
+    "cover": "4. (ERA)MITGERA/PANELL A1 ver 2.jpg",
+    "images": [
+      "4. (ERA)MITGERA/PANELL A1 ver 2.jpg",
+      "4. (ERA)MITGERA/Sin título-1.jpg",
+      "4. (ERA)MITGERA/Nueva carpeta/1.jpg",
+      "4. (ERA)MITGERA/Nueva carpeta/2.jpg",
+      "4. (ERA)MITGERA/Nueva carpeta/3.jpg",
+      "4. (ERA)MITGERA/PLANOLS fons blanc/1.jpg",
+      "4. (ERA)MITGERA/PLANOLS fons blanc/2.jpg",
+      "4. (ERA)MITGERA/PLANOLS fons blanc/3.jpg",
+      "4. (ERA)MITGERA/PLANOLS fons blanc/4.jpg"
+    ],
+    "description": {
+      "ca": "ERA Mitgera és un projecte que s'ha dissenyat amb la finalitat de rehabilitar una mitgera existent. Sobre el concepte (ERA), un espai rural destinat a activitats comunitàries, el projecte proposa una intervenció que reactiva l'espai residual entre construccions amb materials naturals.",
+      "en": "ERA Mitgera is a project designed to rehabilitate an existing party wall. Based on the concept of (ERA) — a rural space for community activities — the project proposes an intervention that reactivates the residual space between constructions using natural materials.",
+      "es": "ERA Mitgera es un proyecto diseñado con la finalidad de rehabilitar una medianera existente. Sobre el concepto (ERA), un espacio rural destinado a actividades comunitarias, el proyecto propone una intervención que reactiva el espacio residual entre construcciones con materiales naturales."
+    }
+  },
+  {
+    "id": "render",
+    "name": "Render",
+    "tile_name": "RENDER",
+    "year": "2022",
+    "section": "altres",
+    "image_cols": 3,
+    "cover": "7. DIBUIXOS/1.jpg",
+    "images": [
+      "7. DIBUIXOS/1.jpg",
+      "7. DIBUIXOS/2.jpg",
+      "7. DIBUIXOS/3.jpg",
+      "7. DIBUIXOS/4.jpg",
+      "7. DIBUIXOS/5.jpg",
+      "7. DIBUIXOS/6.jpg",
+      "7. DIBUIXOS/7.jpg",
+      "7. DIBUIXOS/8.jpg",
+      "7. DIBUIXOS/9.jpg",
+      "7. DIBUIXOS/10.jpg",
+      "7. DIBUIXOS/11.jpg",
+      "7. DIBUIXOS/12.jpg"
+    ],
+    "description": {
+      "ca": "Una col·lecció de renders i dibuixos que exploren el traç manual i digital com a forma de pensament i representació. Des d'esbossos conceptuals fins a representacions tècniques, el conjunt mostra la línia com a eina d'investigació i expressió.",
+      "en": "A collection of renders and drawings exploring freehand and digital mark-making as a form of thinking and representation. From conceptual sketches to technical representations, the series shows the line as a tool for investigation and expression.",
+      "es": "Una colección de renders y dibujos que exploran el trazo manual y digital como forma de pensamiento y representación. Desde bocetos conceptuales hasta representaciones técnicas, el conjunto muestra la línea como herramienta de investigación y expresión."
+    }
+  },
+  {
+    "id": "maquetes",
+    "name": "Maquetes",
+    "tile_name": "MAQUETES",
+    "year": "2022",
+    "section": "altres",
+    "cover": "fotos maqueta/IMATGES EDITADES/IMATFES FINALS EDITADES AMB DIBUIXOS/CARTOLINA/1.jpg",
+    "images": [
+      "fotos maqueta/IMATGES EDITADES/IMATFES FINALS EDITADES AMB DIBUIXOS/CARTOLINA/1.jpg",
+      "fotos maqueta/IMATGES EDITADES/IMATFES FINALS EDITADES AMB DIBUIXOS/CARTOLINA/2.jpg",
+      "fotos maqueta/IMATGES EDITADES/IMATFES FINALS EDITADES AMB DIBUIXOS/CARTOLINA/3.jpg",
+      "fotos maqueta/IMATGES EDITADES/IMATFES FINALS EDITADES AMB DIBUIXOS/CARTOLINA/5.jpg",
+      "fotos maqueta/IMATGES EDITADES/IMATFES FINALS EDITADES AMB DIBUIXOS/FUSTA/1.jpg",
+      "fotos maqueta/IMATGES EDITADES/IMATFES FINALS EDITADES AMB DIBUIXOS/FUSTA/2.jpg",
+      "fotos maqueta/IMATGES EDITADES/IMATFES FINALS EDITADES AMB DIBUIXOS/FUSTA/3.jpg",
+      "fotos maqueta/IMATGES EDITADES/IMATFES FINALS EDITADES AMB DIBUIXOS/FUSTA/4.jpg",
+      "fotos maqueta/IMATGES EDITADES/IMATFES FINALS EDITADES AMB DIBUIXOS/ATRIBUT/1psd.jpg",
+      "fotos maqueta/IMATGES EDITADES/IMATFES FINALS EDITADES AMB DIBUIXOS/ATRIBUT/2.jpg",
+      "fotos maqueta/IMATGES EDITADES/IMATFES FINALS EDITADES AMB DIBUIXOS/ATRIBUT/3.jpg"
+    ],
+    "description": {
+      "ca": "Sèrie de fotografies de maquetes explorant tres materials: cartolina, fusta i atribut. Les imatges combinen la fotografia de model amb intervencions gràfiques, creant un diàleg entre la representació física i el dibuix.",
+      "en": "A series of scale model photographs exploring three materials: cardboard, wood and fabric. The images combine model photography with graphic interventions, creating a dialogue between physical representation and drawing.",
+      "es": "Serie de fotografías de maquetas explorando tres materiales: cartulina, madera y tela. Las imágenes combinan la fotografía de modelo con intervenciones gráficas, creando un diálogo entre la representación física y el dibujo."
+    }
+  }
+]

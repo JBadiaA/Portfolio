@@ -1,0 +1,18 @@
+# Asset folders — too large for git, serve locally or via Firebase Storage
+Projects/
+Reference/
+
+# MCP config — contains API keys, keep local only
+.mcp.json
+
+# Firebase
+.firebase/
+firebase-debug.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+*.swp
